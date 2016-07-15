@@ -1,29 +1,18 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Por favor, leia com atenção para não estragar tudo.
 
-### What is this repository for? ###
+### Para que serve esse repositório afinal? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Marcar progresso do desenvolvimento
+* Controlar versão do aplicativo
+* Criar fonte confiável para guardar os dados do projeto
 
-### How do I get set up? ###
+### Como eu faço para não estragar tudo? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+* Não utilize nenhuma versão fora a recomendada para você
+* Verifique se não há nenhum commit atrasado
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Dúvidas perguntar para Ramon
