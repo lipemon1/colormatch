@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	{
 		public int id;
 		public string nomeDaCor;
+		public string nomeDaCor_PTBR;
 	}
 
 	[System.Serializable]
@@ -28,6 +29,9 @@ public class GameManager : MonoBehaviour {
 		public Text texto;
 		public Color corDoTexto;
 	}
+
+	[Header("Idiomas")]
+	public LanguageManager lm;
 
 	[Header("Sistema de Cores")]
 	public Textos[] listaDeNomes;
@@ -90,7 +94,11 @@ public class GameManager : MonoBehaviour {
 
 			//aqui estou setando o texto de acordo com o identificador de texto escolhido
 			blocos [bloco].nomeDeCor.id = idTextoEscolhido;
-			blocos [bloco].nomeDeCor.nomeDaCor = listaDeNomes [idTextoEscolhido].nomeDaCor;
+			if(lm.idiomaPortugues){
+				blocos [bloco].nomeDeCor.nomeDaCor = listaDeNomes [idTextoEscolhido].nomeDaCor_PTBR;
+			} else {
+				blocos [bloco].nomeDeCor.nomeDaCor = listaDeNomes [idTextoEscolhido].nomeDaCor;
+			}
 			blocos [bloco].texto.text = blocos [bloco].nomeDeCor.nomeDaCor;
 
 			//aqui estou setando a cor de acordo com o identificador de cor escolhido
