@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TutoManager : MonoBehaviour {
 
 	public int telaAtual;
 	public Animator tutorialAnim;
 	public GameObject bgm;
+	public Button esquerda;
+	public Button direita;
 
 	void Awake(){
 		bgm = GameObject.Find ("BGM");
@@ -29,6 +32,19 @@ public class TutoManager : MonoBehaviour {
 	public void MudarTelaEsquerda(){
 		telaAtual--;
 		tutorialAnim.SetInteger ("TelaAtiva", telaAtual);
+	}
+
+	public void DesabilitarDirecionais(){
+		direita.interactable = false;
+		esquerda.interactable = false;
+		StartCoroutine (HabilitarDirecionais ());
+	}
+
+	IEnumerator HabilitarDirecionais()
+	{
+		yield return new WaitForSeconds(1.0F);
+		direita.interactable = true;
+		esquerda.interactable = true;
 	}
 
 	public void IrParaMenu(){
