@@ -4,6 +4,7 @@ using System.Collections;
 public class MenuManager : MonoBehaviour {
 
 	public Animator menuAnim;
+	public GameObject painelInfo;
 
 	public void Tutorial(){
 		menuAnim.SetTrigger("SairMenu");
@@ -34,5 +35,20 @@ public class MenuManager : MonoBehaviour {
 
 		//int scene = SceneManager.GetActiveScene().buildIndex;
 		//SceneManager.LoadScene (scene);
+	}
+
+	public void AbrirInfo(){
+		menuAnim.SetTrigger ("ClicouInfo");
+	}
+
+	public void SairInfo(){
+		menuAnim.SetTrigger ("SaiuInfo");
+		StartCoroutine (FecharInfo ());
+	}
+
+	IEnumerator FecharInfo()
+	{
+		yield return new WaitForSeconds(1);
+		painelInfo.SetActive (false);
 	}
 }
