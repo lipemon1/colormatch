@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour {
 
 	public Animator jogarDeNovoAnim;
+	public bool fecharGameOver;
 	public GameObject bgm;
+    public GameObject gameoverPanel;
 
 	void Awake(){
 		bgm = GameObject.Find ("BGM");
+        FecharTelaGameOver();
 	}
+
+    void FecharTelaGameOver() {
+		if (fecharGameOver) {
+			gameoverPanel.SetActive (false);
+		}
+    }
 
 	public void Restart()
 	{
@@ -21,20 +30,20 @@ public class RestartGame : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(2);
 
-		Application.LoadLevel("game");
+		//Application.LoadLevel("game");
 
 		//int scene = SceneManager.GetActiveScene().buildIndex;
-		//SceneManager.LoadScene (scene);
+		SceneManager.LoadScene ("game");
 	}
 
 	IEnumerator IrMenu()
 	{
 		yield return new WaitForSeconds(2);
 		Destroy (bgm);
-		Application.LoadLevel("menu");
+		//Application.LoadLevel("menu");
 
 		//int scene = SceneManager.GetActiveScene().buildIndex;
-		//SceneManager.LoadScene (scene);
+		SceneManager.LoadScene ("menu");
 	}
 
 	public void IrParaMenu(){

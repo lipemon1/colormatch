@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TutoManager : MonoBehaviour {
 
@@ -56,9 +57,9 @@ public class TutoManager : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(1.5F);
 		Destroy (bgm);
-		Application.LoadLevel("menu");
+		//Application.LoadLevel("menu");
 		
 		//int scene = SceneManager.GetActiveScene().buildIndex;
-		//SceneManager.LoadScene (scene);
+		SceneManager.LoadScene ("menu");
 	}
 }

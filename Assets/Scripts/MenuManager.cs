@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
@@ -7,16 +8,12 @@ public class MenuManager : MonoBehaviour {
 	public GameObject painelInfo;
 
 	public void Tutorial(){
-		menuAnim.SetTrigger("SairMenu");
-		//Application.LoadLevel ("tuto");
-		//SceneManager.LoadScene ("tuto");
+		menuAnim.SetTrigger("SairMenu");	
 		StartCoroutine(SairMenu("tuto"));
 	}
 
 	public void Jogar(){
 		menuAnim.SetTrigger("SairMenu");
-		//Application.LoadLevel ("game");
-		//SceneManager.LoadScene ("game");
 		StartCoroutine(SairMenu("game"));
 	}
 
@@ -26,15 +23,14 @@ public class MenuManager : MonoBehaviour {
 
 		switch (cena) {
 		case "game":
-			Application.LoadLevel("game");
+			//Application.LoadLevel("game");
+            SceneManager.LoadScene ("game");
 			break;
 		case "tuto":
-			Application.LoadLevel("tuto");
+			//Application.LoadLevel("tuto");
+            SceneManager.LoadScene ("tuto");
 			break;
 		}
-
-		//int scene = SceneManager.GetActiveScene().buildIndex;
-		//SceneManager.LoadScene (scene);
 	}
 
 	public void AbrirInfo(){

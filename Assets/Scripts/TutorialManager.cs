@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour {
 	public Animator botaoAprender;
@@ -23,12 +23,12 @@ public class TutorialManager : MonoBehaviour {
 
 	public void Entendeu(){
 		Destroy (bgm);
-		Application.LoadLevel ("menu");
-		//SceneManager.LoadScene ("menu");
+		//Application.LoadLevel ("menu");
+		SceneManager.LoadScene ("menu");
 	}
 
 	public void NaoEntedeu(){
-		Application.LoadLevel ("tuto");
-		//SceneManager.LoadScene ("tuto");
+		//Application.LoadLevel ("tuto");
+		SceneManager.LoadScene ("tuto");
 	}
 }
