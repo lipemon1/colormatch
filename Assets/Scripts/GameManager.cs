@@ -117,12 +117,31 @@ public class GameManager : MonoBehaviour {
 	//Função irá verificar se o match está correto ou não.
 	public bool VerificaMatch(){
 		bool matched;
+        int idBloco0 = blocos[0].idCorDoTexto;
+        int idBloco1 = blocos[1].idTexto;
 
-		if (blocos [0].idTexto == blocos [1].idCorDoTexto & blocos[1].idTexto == blocos[0].idCorDoTexto) {
+        //verifica os dois lados do match
+        /*if (blocos [0].idTexto == blocos [1].idCorDoTexto & blocos[1].idTexto == blocos[0].idCorDoTexto) {
 			matched = true;
 		} else {
 			matched = false;
 		}
+
+        //verifica apenas um lado do match
+        if (blocos [0].idTexto == blocos [1].idCorDoTexto) {
+			matched = true;
+		} else {
+			matched = false;
+		}*/
+
+        if (idBloco0 == idBloco1)
+        {
+            matched = true;
+        }
+        else
+        {
+            matched = false;
+        }
 
 		return matched;
 	}

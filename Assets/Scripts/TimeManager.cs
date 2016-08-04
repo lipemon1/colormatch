@@ -19,6 +19,8 @@ public class TimeManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        barraDeTempo.maxValue = time;
+
 		
 	}
 	
@@ -52,7 +54,7 @@ public class TimeManager : MonoBehaviour {
 	}
 
 	IEnumerator ChamarGameOver() {
-		print(Time.time);
+		//print(Time.time);
 		yield return new WaitForSeconds(2);
 		gameOverPanel.SetActive (true);
 	}

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/menu.unity
+    path: Assets/_Scenes/menu.unity
   - enabled: 1
-    path: Assets/tuto.unity
+    path: Assets/_Scenes/tuto.unity
   - enabled: 1
-    path: Assets/game.unity
+    path: Assets/_Scenes/game.unity
