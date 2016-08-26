@@ -164,7 +164,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Projetos/SourceTree/colormatch/colormatchkeystore.keystore
+  AndroidKeystoreName: F:/Projetos/colormatch/Color Match 1/colormatchkeystore.keystore
   AndroidKeyaliasName: colormatchkeystore
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
