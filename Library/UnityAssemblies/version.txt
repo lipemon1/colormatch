@@ -1,6 +1,0 @@
-5.3.5f1:2.3.0.0
-Android
-E:/Programas/Unity/Editor/Data/Managed/UnityEngine.dll
-E:/Programas/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
-E:/Programas/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
-E:/Programas/Unity/Editor/Data/Managed/UnityEditor.dll
